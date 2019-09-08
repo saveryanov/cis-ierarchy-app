@@ -48,6 +48,8 @@ export abstract class IMutation {
 }
 
 export abstract class IQuery {
+    abstract getDanglingDepartments(): Department[] | Promise<Department[]>;
+
     abstract getTopDepartments(): Department[] | Promise<Department[]>;
 
     abstract getChildren(id: string): Department[] | Promise<Department[]>;

@@ -1,6 +1,6 @@
 import { Injectable, Inject, forwardRef } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, IsNull } from 'typeorm';
 import { Department } from './department.entity';
 import { User } from '../user/user.entity';
 import { DepartmentInput } from '../graphql';
@@ -23,6 +23,10 @@ export class DepartmentService {
 
   async getTopDepartments(): Promise<Department[]> {
     return this.departmentRepository.find({ isRoot: true });
+  }
+
+  async getDanglingDepartments(): Promise<Department[]> {
+    return this.departmentRepository.find({ where: { parentId: IsNull(), isRoot: false } });
   }
 
   async getChildren(

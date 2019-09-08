@@ -20,6 +20,7 @@ input DepartmentInput {
 }
 
 type Query {
+  getDanglingDepartments: [Department]
   getTopDepartments: [Department]
   getChildren(id: ID!): [Department]
   department(id: ID!): Department

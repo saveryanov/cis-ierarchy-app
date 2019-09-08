@@ -26,6 +26,11 @@ export class DepartmentResolver {
   }
 
   @Query()
+  getDanglingDepartments(): Promise<Department[]> {
+    return this.departmentService.getDanglingDepartments();
+  }
+
+  @Query()
   getChildren(
     @Args('id', ParseIntPipe)
     id: number,
