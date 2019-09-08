@@ -1,0 +1,59 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "module",
+        "ecmaFeatures": {}
+    },
+    "rules": {
+        "no-continue": 0,
+        "comma-dangle": ["error", {
+            "arrays": "never",
+            "objects": "always-multiline",
+            "imports": "never",
+            "exports": "never",
+            "functions": "never"
+        }],
+        "no-underscore-dangle": 0,
+        "arrow-parens": 0,
+        "default-case": 0,
+        "space-before-function-paren": 1,
+        "spaced-comment": 1,
+        "no-lonely-if": 1,
+        "camelcase": 1,
+        "quotes": 1,
+        "prefer-arrow-callback": 1,
+        "guard-for-in": 0,
+        "no-floating-decimal": 0,
+        "vars-on-top": 0,
+        "one-var": 0,
+        "no-var": 1,
+        "import/order": 0,
+        "func-names": 0,
+        "no-console": 0,
+        "prefer-const": 0,
+        "no-restricted-syntax": 0,
+        "no-plusplus": 0,
+        "no-param-reassign": 2,
+        "no-use-before-define": 2,
+        "quote-props": 1,
+        "dot-notation": 1,
+        "prefer-template": 1,
+        "prefer-destructuring": 0,
+        "max-len": 0,
+        "no-tabs": 0,
+        "radix": 0,
+        "consistent-return": 0,
+        "no-else-return": 0,
+        "object-shorthand": 0,
+        "indent": 0,
+        "eqeqeq": 0,
+        "no-multiple-empty-lines": 1
+    },
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "extends": "airbnb",
+    "parser": "babel-eslint"
+}

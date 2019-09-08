@@ -1,0 +1,32 @@
+type Department {
+  id: Int
+  isRoot: Boolean
+  name: String
+  headRoleName: String
+  user: User
+  children: [Department]
+  parent: Department
+  directChildrenCount: Int
+  totalChildrenCount: Int
+}
+
+input DepartmentInput {
+  id: Int
+  isRoot: Boolean
+  name: String
+  headRoleName: String
+  parentId: Int
+  userId: Int
+}
+
+type Query {
+  getTopDepartments: [Department]
+  getChildren(id: ID!): [Department]
+  department(id: ID!): Department
+}
+
+type Mutation {
+  createDepartment(department: DepartmentInput): Department,
+  updateDepartment(id: ID!, department: DepartmentInput): Department,
+  deleteDepartment(id: ID!): Boolean
+}
