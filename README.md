@@ -69,7 +69,7 @@ npm run test:e2e
 
 ### Mutations
 
-* createDepartment(department: DepartmentInput): Department - создание направления (как дочерните, так и корневые узлы)
+* createDepartment(department: DepartmentInput): Department - создание направления (корневые узлы isRoot = true, дочерние должны иметь parentId)
 
 * updateDepartment(id: ID!, department: DepartmentInput): Department - изменение направления
 
