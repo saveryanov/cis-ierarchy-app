@@ -4,8 +4,6 @@ services:
     build: .
     ports:
       - 3000:3000
-    env_file:
-      - docker.env
     links:
       - postgres
     depends_on:
@@ -15,9 +13,9 @@ services:
     ports:
       - "5433:5433"
     volumes:
-      - database-data:/var/lib/postgresql/data
+      - postgres-db-data:/var/lib/postgresql/data
     environment:
       - PGPORT=5433
 
 volumes:
-  database-data: {}
+  postgres-db-data: {}
