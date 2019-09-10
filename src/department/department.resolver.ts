@@ -26,6 +26,11 @@ export class DepartmentResolver {
   }
 
   @Query()
+  getDepartments(): Promise<Department[]> {
+    return this.departmentService.getDepartments();
+  }
+
+  @Query()
   getDanglingDepartments(): Promise<Department[]> {
     return this.departmentService.getDanglingDepartments();
   }

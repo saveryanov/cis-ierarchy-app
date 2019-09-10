@@ -21,6 +21,10 @@ export class DepartmentService {
     return this.departmentRepository.findOne(id);
   }
 
+  async getDepartments(): Promise<Department[]> {
+    return this.departmentRepository.find();
+  }
+
   async getTopDepartments(): Promise<Department[]> {
     return this.departmentRepository.find({ isRoot: true });
   }

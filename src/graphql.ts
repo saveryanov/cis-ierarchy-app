@@ -52,6 +52,8 @@ export abstract class IQuery {
 
     abstract getTopDepartments(): Department[] | Promise<Department[]>;
 
+    abstract getDepartments(): Department[] | Promise<Department[]>;
+
     abstract getChildren(id: string): Department[] | Promise<Department[]>;
 
     abstract department(id: string): Department | Promise<Department>;
