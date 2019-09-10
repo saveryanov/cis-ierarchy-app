@@ -29,6 +29,7 @@ export class Department {
     user?: User;
     children?: Department[];
     parent?: Department;
+    parentId?: number;
     directChildrenCount?: number;
     totalChildrenCount?: number;
 }

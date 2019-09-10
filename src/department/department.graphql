@@ -6,6 +6,7 @@ type Department {
   user: User
   children: [Department]
   parent: Department
+  parentId: Int
   directChildrenCount: Int
   totalChildrenCount: Int
 }
